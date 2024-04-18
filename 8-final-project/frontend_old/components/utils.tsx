@@ -1,3 +1,4 @@
+'use client'
 import styled from "styled-components";
 
 export const colors = {
@@ -23,6 +24,13 @@ export const Block = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+`
+
+export const Container = styled.div`
+    min-width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    background-color: ${colors.black};
 `
 
 export const Button = styled.button<{ $primary?: boolean; }>`

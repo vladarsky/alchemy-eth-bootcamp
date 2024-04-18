@@ -11,7 +11,7 @@ const config = createConfig(
     getDefaultConfig({
         // Required API Keys
         alchemyId: process.env.ALCHEMY_API_KEY, // or infuraId
-        walletConnectProjectId: "demo",
+        walletConnectProjectId: "d4f6f177840998dd2271618b45feda45",
 
         // Required
         appName: "You Create Web3 Dapp",
@@ -20,7 +20,7 @@ const config = createConfig(
         appDescription: "Your App Description",
         appUrl: "https://family.co", // your app's url
         appIcon: "https://family.co/logo.png", // your app's logo,no bigger than 1024x1024px (max. 1MB)
-        chains
+        chains,
     })
 );
 
