@@ -12,10 +12,11 @@ export const Title = styled.h1`
     color: ${colors.black};
 `;
 
-export const Text = styled.h1`
-  font-size: 1rem;
-  text-align: center;
-  color: ${colors.black};
+export const Text = styled.span`
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: ${colors.black};
 `;
 
 export const Block = styled.div`
@@ -31,6 +32,13 @@ export const Container = styled.div`
     max-width: 1200px;
     display: flex;
     background-color: ${colors.white};
+`
+
+export const Section = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 `
 
 export const Button = styled.button<{ $primary?: boolean; }>`

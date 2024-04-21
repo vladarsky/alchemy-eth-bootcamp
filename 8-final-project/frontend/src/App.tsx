@@ -1,11 +1,11 @@
-import {Main} from "./components/main/main.tsx";
+import {MainPage} from "./components/main/MainPage.tsx";
 import {Navbar} from "./components/navbar";
 
 function App() {
     return (
         <>
             <Navbar></Navbar>
-            <Main/>
+            <MainPage/>
         </>
     )
 }

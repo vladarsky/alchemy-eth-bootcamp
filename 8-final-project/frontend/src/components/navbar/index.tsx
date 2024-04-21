@@ -8,7 +8,9 @@ export function Navbar() {
             <a href="https://alchemy.com/?a=create-web3-dapp" target={"_blank"}>
                 <Title color={colors.black}>Lottery Dapp</Title>
             </a>
-            <ConnectKitButton/>
+            <ConnectKitButton customTheme={{
+                "--ck-connectbutton-background": colors.black
+            }}/>
         </NavbarContainer>
     );
 }

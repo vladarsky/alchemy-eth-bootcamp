@@ -7,7 +7,8 @@
 		"deploy-testnet": "npx hardhat run ./scripts/MyContract_deploy.js --network ETH_GOERLI",
 		"deploy": "npx hardhat run ./scripts/MyContract_deploy.js --network ETH_MAINNET",
 		"node": "npx hardhat node",
-		"deploy-local": "npx hardhat run ./scripts/MyContract_deploy.js --network localhost"
+		"deploy-local": "npx hardhat run scripts/Lottery_deploy.js --network localhost",
+		"test": "npx hardhat test"
 	},
 	"dependencies": {
 		"dotenv": "^16.0.2",

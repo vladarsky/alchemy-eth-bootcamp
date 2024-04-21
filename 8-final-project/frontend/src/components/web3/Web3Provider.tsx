@@ -3,13 +3,16 @@ import {hardhat} from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 
+// const walletConnectProjectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID
+
+// @ts-ignore
 const config = createConfig(
     getDefaultConfig({
         // Your dApps chains
         chains: [hardhat],
 
         // Required API Keys
-        walletConnectProjectId: import.meta.env.WALLET_CONNECT_PROJECT_ID,
+        walletConnectProjectId: null as unknown as string,
 
         // Required App Info
         appName: "Your App Name",

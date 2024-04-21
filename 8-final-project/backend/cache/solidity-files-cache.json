@@ -1,10 +1,45 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/contracts/MyContract.sol": {
-      "lastModificationDate": 1713449362914,
-      "contentHash": "4702a29199532f2e9109e546f0ccc5f7",
-      "sourceName": "contracts/MyContract.sol",
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/contracts/HelloWorld.sol": {
+      "lastModificationDate": 1713551496792,
+      "contentHash": "2df29791a0d02196ad568722cd9eb31b",
+      "sourceName": "contracts/HelloWorld.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HelloWorld"
+      ]
+    },
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1713449401403,
+      "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -29,14 +64,15 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/access/AccessControl.sol"
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
       ],
       "versionPragmas": [
-        "^0.8.9"
+        "^0.8.0"
       ],
       "artifacts": [
-        "MyContract"
+        "ERC20"
       ]
     },
     "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
@@ -79,45 +115,6 @@
         "AccessControl"
       ]
     },
-    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1713449401403,
-      "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IERC20.sol",
-        "./extensions/IERC20Metadata.sol",
-        "../../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC20"
-      ]
-    },
     "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1713449401113,
       "contentHash": "f07feb4a44b1a4872370da5aa70e8e46",
@@ -151,6 +148,78 @@
       ],
       "artifacts": [
         "Context"
+      ]
+    },
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1713449401721,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1713449401725,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
       ]
     },
     "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
@@ -368,10 +437,47 @@
         "IERC165"
       ]
     },
-    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1713449401721,
-      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/contracts/Lottery.sol": {
+      "lastModificationDate": 1713708188793,
+      "contentHash": "f030cc0b459558c8be29d2173a4bac87",
+      "sourceName": "contracts/Lottery.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Lottery"
+      ]
+    },
+    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1713449402216,
+      "contentHash": "896f68942c3a20e9ae3c3c5bfd3add54",
+      "sourceName": "hardhat/console.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -397,47 +503,10 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        ">=0.4.22 <0.9.0"
       ],
       "artifacts": [
-        "IERC20"
-      ]
-    },
-    "/Users/vladarsky/projects/alchemy-eth-bootcamp/8-final-project/backend/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1713449401725,
-      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC20Metadata"
+        "console"
       ]
     }
   }
