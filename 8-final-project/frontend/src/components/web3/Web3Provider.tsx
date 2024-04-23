@@ -1,15 +1,16 @@
 import { WagmiProvider, createConfig } from "wagmi";
-import {hardhat} from "wagmi/chains";
+import {hardhat, goerli} from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 
 // const walletConnectProjectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID
+const network = import.meta.env.VITE_NETWORK === 'hardhat' ? hardhat : goerli; // Assuming 'goerli' is defined for the Goerli network
 
 // @ts-ignore
 const config = createConfig(
     getDefaultConfig({
         // Your dApps chains
-        chains: [hardhat],
+        chains: [network],
 
         // Required API Keys
         walletConnectProjectId: null as unknown as string,

@@ -4,12 +4,13 @@ import styled from "styled-components";
 import LotteryEntrance from "./EnterLottery.tsx";
 import LotteryABI from '../../../artifacts/contracts/Lottery.sol/Lottery.json';
 import {Participants} from "./Participants.tsx";
-import {useEffect, useState} from "react"; // Assuming ABI is exported as JSON
+import {useEffect, useState} from "react";
+import {Address} from "viem"; // Assuming ABI is exported as JSON
 
 const lotteryAddress = import.meta.env.VITE_LOTTERY_ADDRESS; // Your deployed contract address
 
 export const MainPage = () => {
-    const [isEntered, setIsEntered] = useState()
+    const [isEntered, setIsEntered] = useState(false)
     const {address} = useAccount();
     const {data} = useBalance({
         address,
@@ -23,7 +24,9 @@ export const MainPage = () => {
 
 
     useEffect(() => {
-        setIsEntered((participants as string[])?.includes(address))
+        if(address) {
+            setIsEntered((participants as Address[])?.includes(address))
+        }
     }, [address, participants])
 
     return (
@@ -43,7 +46,7 @@ export const MainPage = () => {
                         <Text>{data?.formatted} {data?.symbol}</Text>
                     </Block>
                     <Block>
-                        <LotteryEntrance contractAddress={lotteryAddress} abi={LotteryABI} isEntered={isEntered} onEnter={() => refetch()}/>
+                        <LotteryEntrance address={lotteryAddress} abi={LotteryABI} isEntered={isEntered} onEnter={() => refetch()}/>
                     </Block>
                 </Section>
                 <Participants participants={participants} refresh={refetch}/>
