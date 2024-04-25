@@ -1,10 +1,14 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import { ethers } from "ethers";
 import LotteryABI from '../../frontend/artifacts/contracts/Lottery.sol/Lottery.json'; // Assuming ABI is exported as JSON
 
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Replace with actual contract address
-const privateKey = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; // Owner's private key for demonstration; use environment variables in production
+const contractAddress = process.env.CONTRACT_ADDRESS as string; // Replace with actual contract address
+const privateKey = process.env.PRIVATE_KEY as string; // Owner's private key for demonstration; use environment variables in production
+const providerURL = process.env.JSON_RPS_PROVIDER as string;
 
-const provider = new ethers.providers.JsonRpcProvider("http://localhost:8545"); // Adjust your provider URL
+const provider = new ethers.providers.JsonRpcProvider(providerURL); // Adjust your provider URL
 const signer = new ethers.Wallet(privateKey, provider);
 const lotteryContract = new ethers.Contract(contractAddress, LotteryABI.abi, signer);
 
