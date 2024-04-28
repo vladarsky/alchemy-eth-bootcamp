@@ -6,5 +6,5 @@
 6. run "npm run dev" in frontend
 7. Go to http://localhost:5173/
 8. Take private key from hardhat node, import it and participate in lottery!
-9. Run "npx ts-node scripts-debug/pick-winner.ts" once you are ready to finish lottery
+9. Run "npm run pick-winner" once you are ready to finish lottery
 10. To run tests run 'npm run test' in backend
